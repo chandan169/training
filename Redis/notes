@@ -1,0 +1,192 @@
+.net core
+-----------
+- .Net core version
+	- version 1.0
+	- version 1.1
+	- version 2.0
+	- version 2.1
+	- version 2.2(LTS long term support)
+	- version 3.0(current)
+	
+- features of .NEt core
+	-light weight
+	- cross-platform support
+	- cli support
+	- Support varios IDEs.
+	- Support developing console like ASP.net (MVC, web api, SPA) class lib UWP(universal 
+		- no web form 
+		- no WPF and windows forms
+		- no WCF and WF(work flow)
+		- in 3.0 version, it is supporting wpf.
+	- built in feature of DI system.
+		- we can replace Built-in DI system with 3rd party DI system (Autofac).
+	- Tag Helpers are used insted of HTML helpwes
+		- HTML helpers are not replaced.
+		<a action="Index" controller="Home" route-params="" area="" class="nav-item"></a>
+	-Razor page in >NET core 2.0
+		- Blazor is used in 3.0 version
+		
+	-Configuratin is JSON based.
+	appsetting.json file.
+	- NET core can read config parameter   from:
+		- Environment vriable
+		- command line Argumet.
+		JSON file.XML 
+		xml files
+		ini files
+		key value pair
+		
+	- Application templates
+	- console
+	-Asp .net
+		-MVC 
+		Web api
+		SPA
+	-class library
+	-standard libraries can be used with .net Framework and .net core
+	-UWP
+		
+-ASP.net MVC
+	- .Net Core web application uses a builtin web server called Kestral.
+	- Kestral is a cross-platform light weightweb server
+	-Program.cs
+		- creates and starts a webhost server.
+		-contains a main method that starts the Host for MVC app.
+	- type of Host in .net Core
+		- WebHost(ASP.NET,  WEB API)
+		- Generic host - ther is no HTTP request pipeline, used for WEb jobs
+		
+	-Startup.cs
+		- Configure the services for the application.
+		- ConfigureService() method is used to configure the service required in app.
+		- Creates a request pipeline for handling request.
+			- Configure() method is used to configure the request pipeline.
+			- Request pipeline defines how to handle the Http Request.
+	-appsetting.json
+		-Configuration file that contains the appsetting and connection string
+	
+	-wwwwroot
+		-This folder is the default static files folder.
+	-csproj file
+		- contains the framework version and package information
+		- 
+			-Metapackage name is Microsoft.ASP.NetCore.App
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	middleware 
+	 can be created using 
+		use() method,
+			- used to create custom middleware.
+			- It take a function as arg, that has two parameters 
+		run() method,
+			 request terminator -short circuit middleware,
+		map() method
+			used to execute a pipeline 
+		mapwhen() method 
+		
+	built in middleware
+		- useDeveloperExceptionPage()
+		- UseExceptionHandler()
+		- UseHsts()
+			- Enable 
+		- UseHttpRedirect()
+			- Automaticaly redirect all Http request to Https
+		- UseCookiePolicey()
+			-Adds one layer of security for cookie usage.
+			- asks the user to allow or deny cookie creation.
+		- UseMvc()
+			-Execute the controller action based on route request.
+			- checks the route table and decides which controller and action need to be executed.
+			- Routing url templates can be defined in the middleware.
+			-UseMvccWithDefaultRoute() applies a middleware with default route templates.
+			- UseMvc() applies a routing middleware that allows custom routing templated.
+		- UseStaticFiles()
+			- Is required to serve the static files for application.
+			- Default static file folder is wwwwroot.
+			- this can be used multiple time in a request pipeline.
+			- Use parameters to define static file directories and options other than wwwroot.
+		- UseDirectoryBrowser()
+		- UseDefaultFiles()
+		- UseFileServer()
+		
+	
+	
+	
+	
+	
+Services
+	- Services are reusable codein an applications
+	- Services need to be registered in configureservice method of startup class
+	- .Net code DI system creates and inject the instance of a service where ever is required.
+	- IOC container will take care of the object life time scope.
+	- services are registered in ServiceCollection object (services)
+	- Services can be registered with the following scope and life time:
+		-singleton
+			- A single instance of service is created and maintained till the end of application.
+			- services.AddSingleton() method to register a service as singleton.			
+		-Scoped
+			- A single instance per request scope.
+		- Transient
+			- It creates a new instance everytime wherever it is requested.
+			- short lived objects.
+		-Built-in DI system can be replaced by third party IoC containers (eg:Autofac)
+		
+-Configuration Sources
+	- Configuration means that parameters passed to the application for execution.
+	- Such a application settings, Connection string etc.
+	- passed a key-value pair format.
+	- we have many configuration sources in .Net core App:
+		- Command line Arguments
+		- Environment variable
+		- AppSettings.json
+		- XML files
+		- ini files
+		- Key per file.
+		- Azure Key vault.
+		- in memory collection.
+	- when the default web host builder creates a web host it comes with some preconfigured configuration sources such as 
+	cmd line args, Env variables and appsetting.json
+	
+	
+	ASP.NET MVC
+		-Every controller inherits from controller.
+		- Every action has return type of IActionResult.
+		- In attribute routing the [RoutePrefix] is replaced by [Route] attribute.
+		- Action selector (HttpGet, HttpPost) attribute can be used for defining URI action.
+		- tag helpers
+			 - A tag helper is a c# class that can be used to create custom tags and attributes.
+			 - While rendering the page Taghelper will be converted into HTML element.
+			 - Asp.Net core provides a set of built-in tag helper we can x
+			 
+	 Caching in Asp.NET
+		 -used for application performance improvement
+		 - instead of regenerating the data or response we can store the data and response in storage for a temporary period of time.
+		 - caching methods in ASP.NET
+				-Response cache in .NET core we use ResponseCache attribute to cache a action response.
+				- In-memory data caching
+						- locally cache the data within the applicaton macchine.
+						- this is not reliable, because if app crashed the cach will expire.
+						- Add In emeory cache service to the service collection by calling AddMemoryCache()
+						- Inject the IMemoryCache in the controller to get access to the cache object.
+				- Distributed caching	
+					- which stores the cache data outside the application.
+					- We can use SqlServer or Redis server to cache data.
+					- We use IDistributedCache interface to get access to the distributed cache service.
+						Distributed cache provider:
+							- InMemory DistributedCache.
+									- Only for development purpose, not for production.
+							- SqlServer DistributedCache.
+								- dotnet sql-cache create "Data source=(localdb)
+							- Redis DistributedCache.
+	
+	
+	
+		

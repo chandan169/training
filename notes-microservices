@@ -1,0 +1,63 @@
+Developing microservices
+
+-What is monolithic architecture?
+	- All appliction module are part of single project
+		Features:
+			old an easy approacch
+			No headache of implementing communication
+			Easy to deploy and develop
+			tightly coupled
+			choice of framework and languages are less
+			Entire project need to be redeploy for a single line change in any module
+			scaling of individual module is not possible
+			limited /complex polyglot persistence 
+			
+	SOA(service oriented architecture)
+		creates each module of app is created as individually deployable project
+		we use a common communication channel which is used by all module
+		all communication happen through a common communication channel called ESB
+			-ESB Enterprise service Bus (ESB Mule)
+		all module share a common database
+			
+	Microservice 
+		individually developed, tested and deployed.
+		they never share the database
+		Any service can communicate to any other service direcly
+		every service is exposing a well defined end point like REST
+		follows multiple communication patterns:
+			Http based - REST
+			Message based - Queues]
+	
+	Microservices
+		-Communication patterns :
+			-Rest bases (Http)
+				- Nearly real time
+				- Synchronous in nature
+				- one to one communication
+				- for every request there is a response received.
+			-Queue based
+				- Not a real time communication.
+				- Asynchronous in nature
+				- one to many and one to many communication tyoe is supportted.
+				- No response required for messaged based communication
+			-Event based
+				- Nearly real time.
+				- Asynchronous
+				- one way communication
+				- no response received.
+				- one or more event handlers can catch the event data.
+		-Choice of languages and framework
+		- database is not shared
+		- independentmy se
+	.Net core web api(Differences from asp.net framework api)
+		-Every controller is inherited form Controller base
+		- ControllerBase is a base class doe MVC controller and API  controller
+		- Every controller os decorated with [ApiController] attribute.
+		- No Route prefix for controller, here Route() is used instead of defining prefix
+		- No Route() attribute is required for action, Http Method selector attribute can define the tempalate and Route name
+		- Method return type
+			-void
+			- specific type such as string, boolen, integer etc.
+			
+		- 
+			

@@ -1,0 +1,14 @@
+D:\chk\Microservices\CatalogApi\CatalogApi\bin\Debug\netcoreapp2.2\CatalogApi.deps.json
+D:\chk\Microservices\CatalogApi\CatalogApi\bin\Debug\netcoreapp2.2\CatalogApi.runtimeconfig.json
+D:\chk\Microservices\CatalogApi\CatalogApi\bin\Debug\netcoreapp2.2\CatalogApi.runtimeconfig.dev.json
+D:\chk\Microservices\CatalogApi\CatalogApi\bin\Debug\netcoreapp2.2\CatalogApi.dll
+D:\chk\Microservices\CatalogApi\CatalogApi\obj\Debug\netcoreapp2.2\CatalogApi.csprojAssemblyReference.cache
+D:\chk\Microservices\CatalogApi\CatalogApi\obj\Debug\netcoreapp2.2\CatalogApi.csproj.CoreCompileInputs.cache
+D:\chk\Microservices\CatalogApi\CatalogApi\obj\Debug\netcoreapp2.2\CatalogApi.RazorAssemblyInfo.cache
+D:\chk\Microservices\CatalogApi\CatalogApi\obj\Debug\netcoreapp2.2\CatalogApi.RazorAssemblyInfo.cs
+D:\chk\Microservices\CatalogApi\CatalogApi\obj\Debug\netcoreapp2.2\CatalogApi.AssemblyInfoInputs.cache
+D:\chk\Microservices\CatalogApi\CatalogApi\obj\Debug\netcoreapp2.2\CatalogApi.AssemblyInfo.cs
+D:\chk\Microservices\CatalogApi\CatalogApi\obj\Debug\netcoreapp2.2\CatalogApi.RazorTargetAssemblyInfo.cache
+D:\chk\Microservices\CatalogApi\CatalogApi\bin\Debug\netcoreapp2.2\CatalogApi.pdb
+D:\chk\Microservices\CatalogApi\CatalogApi\obj\Debug\netcoreapp2.2\CatalogApi.dll
+D:\chk\Microservices\CatalogApi\CatalogApi\obj\Debug\netcoreapp2.2\CatalogApi.pdb

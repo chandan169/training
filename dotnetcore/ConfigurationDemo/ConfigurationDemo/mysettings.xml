@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<myapp>
+  <version>2.0.0</version>
+  <appname>Config demo</appname>
+  <developer>
+    <name>Chandan</name>
+    <email>chk@gmail.com</email>
+  </developer>
+  <NUMBER_OF_PROCESSORS>5</NUMBER_OF_PROCESSORS>
+  <PROCESSOR_ARCHITECTURE>X86</PROCESSOR_ARCHITECTURE>
+</myapp>

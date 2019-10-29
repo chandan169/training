@@ -1,0 +1,14 @@
+D:\chk\dotnetcore\middleware2aspcore\middleware2aspcore\bin\Debug\netcoreapp2.2\middleware2aspcore.deps.json
+D:\chk\dotnetcore\middleware2aspcore\middleware2aspcore\bin\Debug\netcoreapp2.2\middleware2aspcore.runtimeconfig.json
+D:\chk\dotnetcore\middleware2aspcore\middleware2aspcore\bin\Debug\netcoreapp2.2\middleware2aspcore.runtimeconfig.dev.json
+D:\chk\dotnetcore\middleware2aspcore\middleware2aspcore\bin\Debug\netcoreapp2.2\middleware2aspcore.dll
+D:\chk\dotnetcore\middleware2aspcore\middleware2aspcore\bin\Debug\netcoreapp2.2\middleware2aspcore.pdb
+D:\chk\dotnetcore\middleware2aspcore\middleware2aspcore\obj\Debug\netcoreapp2.2\middleware2aspcore.csprojAssemblyReference.cache
+D:\chk\dotnetcore\middleware2aspcore\middleware2aspcore\obj\Debug\netcoreapp2.2\middleware2aspcore.csproj.CoreCompileInputs.cache
+D:\chk\dotnetcore\middleware2aspcore\middleware2aspcore\obj\Debug\netcoreapp2.2\middleware2aspcore.RazorAssemblyInfo.cache
+D:\chk\dotnetcore\middleware2aspcore\middleware2aspcore\obj\Debug\netcoreapp2.2\middleware2aspcore.RazorAssemblyInfo.cs
+D:\chk\dotnetcore\middleware2aspcore\middleware2aspcore\obj\Debug\netcoreapp2.2\middleware2aspcore.AssemblyInfoInputs.cache
+D:\chk\dotnetcore\middleware2aspcore\middleware2aspcore\obj\Debug\netcoreapp2.2\middleware2aspcore.AssemblyInfo.cs
+D:\chk\dotnetcore\middleware2aspcore\middleware2aspcore\obj\Debug\netcoreapp2.2\middleware2aspcore.RazorTargetAssemblyInfo.cache
+D:\chk\dotnetcore\middleware2aspcore\middleware2aspcore\obj\Debug\netcoreapp2.2\middleware2aspcore.dll
+D:\chk\dotnetcore\middleware2aspcore\middleware2aspcore\obj\Debug\netcoreapp2.2\middleware2aspcore.pdb
