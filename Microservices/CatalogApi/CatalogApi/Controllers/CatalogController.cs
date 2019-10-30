@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using CatalogApi.Infrastructure;
 using CatalogApi.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
@@ -13,6 +16,8 @@ namespace CatalogApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    //[EnableCors("AllowPartners")] //we can use Cors policey at controller level also, this attribute allows us to use this policey defined in startup
+    [Authorize]
     public class CatalogController : ControllerBase
     {
         private CatalogContext db;
@@ -22,6 +27,7 @@ namespace CatalogApi.Controllers
             this.db = db;
         }
 
+        [AllowAnonymous]
         [HttpGet("", Name = "GetProducts")]
         public async Task<List<CatalogItem>> GetProducts()
         {
@@ -29,20 +35,47 @@ namespace CatalogApi.Controllers
             return result.ToList();
         }
 
-        [HttpPost("", Name="AddProducts")]
-        public ActionResult<CatalogItem> AddProduct(CatalogItem item)
-        {
-            this.db.Catalog.InsertOne(item);
-            return item;
-        }
-        [HttpGet("{id}", Name="FindById")]
+        [AllowAnonymous]
+        [HttpGet("{id}", Name = "FindById")]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
         public async Task<ActionResult<CatalogItem>> FindProductbyId(string id)
         {
             var builder = Builders<CatalogItem>.Filter;
             var filter = builder.Eq("Id", id);
-            var item = await db.Catalog.FindAsync(filter);
-            return item.FirstOrDefault();                
+            var result = await db.Catalog.FindAsync(filter);
+            var item = result.FirstOrDefault();
+            if (item == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(item);
+            }
         }
+
+        [Authorize(Roles = "admin")]
+        [HttpPost("", Name="AddProducts")]
+        //[EnableCors("AllowPartners")]
+        [ProducesResponseType((int)HttpStatusCode.Created)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public ActionResult<CatalogItem> AddProduct(CatalogItem item)
+        {
+            TryValidateModel(item);
+            if (ModelState.IsValid)
+            {
+                this.db.Catalog.InsertOne(item);
+                return Created("", item);
+            }
+            
+            else{
+                return BadRequest(ModelState);
+            }
+           
+        }
+
+        [Authorize(Roles="admin")]
         [HttpPost("product")]
         public ActionResult<CatalogItem> AddProduct()
         {
@@ -72,6 +105,7 @@ namespace CatalogApi.Controllers
             db.Catalog.InsertOne(catalogItem);
             return catalogItem;
         }
+
         [NonAction]
         private string SaveImageToLocal(IFormFile image)
         {

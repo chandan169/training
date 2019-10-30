@@ -16,7 +16,7 @@ namespace CatalogApi.Infrastructure
         public CatalogContext(IConfiguration configuration)
         {
             this.configuration = configuration;
-            var connectionString = configuration.GetValue<String>("MongoSettings:ConnectionString");
+            var connectionString = configuration.GetValue<String>("MongoSettings:ConnectionStrings");
             MongoClientSettings setting = MongoClientSettings.FromConnectionString(connectionString);
             MongoClient client = new MongoClient(setting);
             if (client != null)
