@@ -58,6 +58,24 @@ Developing microservices
 		- Method return type
 			-void
 			- specific type such as string, boolen, integer etc.
-			
+			- HttpResponseMessage
+			- ActionResult<T> -Recommended
+	CORS policies
+		- cross origin resource sharing
+		- Defines a set of rules that tells the API to allow certain domain, methods and headers.
+	
+	Open API documentation
+		- for web service we get service documentation using WSDL file (WSDl web service description language.)
+		- for REST full services we can use open API Specification documentation swagger doc.
+		- we can use swashbuckle.aspNetCore package to configure the swagger doc.
+		
+	Enable XML serializer
+		- use the AddXmlDataContactSerializerFormatters() method with service.AddMvc()
+	-Authentication for Web Api
+		-No login GUI is provided for APIs
+		- Use token for authentication. (oAuth token, JWT(json web token) token)
+		- A token is an encrypted text that contain the audience (api), issuer(identity
+		  claims (roles and other info), expiry time Algorithm and secret code 
+	- 
 		- 
 			
