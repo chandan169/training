@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CatalogApi.Infrastructure;
+using CatalogApi.CustomFormatters;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -84,7 +85,10 @@ namespace CatalogApi
                };
            });
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc(option=>
+            {
+                option.OutputFormatters.Add(new CsvOutputFormatter());
+            }).AddXmlDataContractSerializerFormatters().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             
         }
 
@@ -96,7 +100,7 @@ namespace CatalogApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors();
+            app.UseCors("AllowAll");
 
             app.UseSwagger();
 

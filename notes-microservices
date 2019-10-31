@@ -78,4 +78,27 @@ Developing microservices
 		  claims (roles and other info), expiry time Algorithm and secret code 
 	- 
 		- 
+		
+	RabbitMQ
+		-Communication patterns
+			- Restful services -synchronous
+			- Message based - Asynchronous, one to many, not real time
+			- Event driven architecture - Asynchronous, one to many, real-time 
 			
+		-Messaging
+			- two application can communicate asynchronously.
+			- a small text message is sent to a message broker.
+			- A message broker is an agent that provides message based communication
+				- feature
+					- provides storage for message
+					- different message delivery patterns
+						-direct - one to one
+						- topic - pattern based (multicast)
+						- fanout - broad casting to everyone
+					- deliver messsage when receipent come online
+					-TTL -time to live -undelivered messages can be moved to dead letter queue.
+					
+			common message broker are
+				- Azure service bus, Azure storage queue, rabbitMQ
+				
+					

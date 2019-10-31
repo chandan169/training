@@ -72,7 +72,7 @@ namespace IdentityApi
             {
                 app.UseSwaggerUI(config =>
                 {
-                    config.SwaggerEndpoint("/swagger/v1/swagger.json", "Catalog API");
+                    config.SwaggerEndpoint("/swagger/v1/swagger.json", "Identity API");
                     config.RoutePrefix = "";
                 });
             }

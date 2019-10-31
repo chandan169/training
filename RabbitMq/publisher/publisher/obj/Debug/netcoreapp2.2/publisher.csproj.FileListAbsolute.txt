@@ -1,0 +1,11 @@
+D:\chk\RabbitMq\publisher\publisher\bin\Debug\netcoreapp2.2\publisher.deps.json
+D:\chk\RabbitMq\publisher\publisher\bin\Debug\netcoreapp2.2\publisher.runtimeconfig.json
+D:\chk\RabbitMq\publisher\publisher\bin\Debug\netcoreapp2.2\publisher.runtimeconfig.dev.json
+D:\chk\RabbitMq\publisher\publisher\bin\Debug\netcoreapp2.2\publisher.dll
+D:\chk\RabbitMq\publisher\publisher\obj\Debug\netcoreapp2.2\publisher.csprojAssemblyReference.cache
+D:\chk\RabbitMq\publisher\publisher\obj\Debug\netcoreapp2.2\publisher.csproj.CoreCompileInputs.cache
+D:\chk\RabbitMq\publisher\publisher\obj\Debug\netcoreapp2.2\publisher.AssemblyInfoInputs.cache
+D:\chk\RabbitMq\publisher\publisher\obj\Debug\netcoreapp2.2\publisher.AssemblyInfo.cs
+D:\chk\RabbitMq\publisher\publisher\bin\Debug\netcoreapp2.2\publisher.pdb
+D:\chk\RabbitMq\publisher\publisher\obj\Debug\netcoreapp2.2\publisher.dll
+D:\chk\RabbitMq\publisher\publisher\obj\Debug\netcoreapp2.2\publisher.pdb

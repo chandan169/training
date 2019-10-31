@@ -232,7 +232,7 @@ Entity framework core
 	configure the DBContext service in configureServices method
 	for production we use sql server as database
 	database sources
-	-In-memeoryu
+	-In-memeory
 	
 			
 			
