@@ -1,0 +1,10 @@
+C:\Users\r1m1nrao\source\repos\TopicSubscriberr\TopicSubscriberr\bin\Debug\netcoreapp2.2\TopicSubscriberr.deps.json
+C:\Users\r1m1nrao\source\repos\TopicSubscriberr\TopicSubscriberr\bin\Debug\netcoreapp2.2\TopicSubscriberr.runtimeconfig.json
+C:\Users\r1m1nrao\source\repos\TopicSubscriberr\TopicSubscriberr\bin\Debug\netcoreapp2.2\TopicSubscriberr.runtimeconfig.dev.json
+C:\Users\r1m1nrao\source\repos\TopicSubscriberr\TopicSubscriberr\bin\Debug\netcoreapp2.2\TopicSubscriberr.dll
+C:\Users\r1m1nrao\source\repos\TopicSubscriberr\TopicSubscriberr\obj\Debug\netcoreapp2.2\TopicSubscriberr.csproj.CoreCompileInputs.cache
+C:\Users\r1m1nrao\source\repos\TopicSubscriberr\TopicSubscriberr\obj\Debug\netcoreapp2.2\TopicSubscriberr.AssemblyInfoInputs.cache
+C:\Users\r1m1nrao\source\repos\TopicSubscriberr\TopicSubscriberr\obj\Debug\netcoreapp2.2\TopicSubscriberr.AssemblyInfo.cs
+C:\Users\r1m1nrao\source\repos\TopicSubscriberr\TopicSubscriberr\bin\Debug\netcoreapp2.2\TopicSubscriberr.pdb
+C:\Users\r1m1nrao\source\repos\TopicSubscriberr\TopicSubscriberr\obj\Debug\netcoreapp2.2\TopicSubscriberr.dll
+C:\Users\r1m1nrao\source\repos\TopicSubscriberr\TopicSubscriberr\obj\Debug\netcoreapp2.2\TopicSubscriberr.pdb

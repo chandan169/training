@@ -1,0 +1,10 @@
+C:\Users\r1m1nrao\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.2\fanoutSubscriber.deps.json
+C:\Users\r1m1nrao\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.2\fanoutSubscriber.runtimeconfig.json
+C:\Users\r1m1nrao\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.2\fanoutSubscriber.runtimeconfig.dev.json
+C:\Users\r1m1nrao\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.2\fanoutSubscriber.dll
+C:\Users\r1m1nrao\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.2\fanoutSubscriber.pdb
+C:\Users\r1m1nrao\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.2\fanoutSubscriber.csproj.CoreCompileInputs.cache
+C:\Users\r1m1nrao\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.2\fanoutSubscriber.AssemblyInfoInputs.cache
+C:\Users\r1m1nrao\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.2\fanoutSubscriber.AssemblyInfo.cs
+C:\Users\r1m1nrao\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.2\fanoutSubscriber.dll
+C:\Users\r1m1nrao\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.2\fanoutSubscriber.pdb

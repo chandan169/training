@@ -238,6 +238,68 @@ Entity framework core
 			
 			
 			
+Docker
+	-Images
+		
+		contaniser application is called image.
+		image is used to create instance of applicaion.
+		the running instnace is called conatiner.
+		every conatiner has an unique name and id.
+		every image also has a unique name and id
+		image name must be in <imagename>:<tag> format
+			-tag is a version identifier ar unique value that can be used to identify image
+			eg: eshop-web:1.0
+				eshop-web:2.0
+				eshop-web:3.0
+				
+			if tag name is not supplied at the time of image creation, it will be assigned to 'latest' by default
+			eg: eshop-web: latest
+			
+			-an image contains a set of layers.
+				every layer has unique id
+			Repositories (registries)
+				-Is a storage place for code and data.
+				- a docker image repository is a place to store images.
+				- Repositories can be local and cloud
+					Local
+						- store locally in Dev machine.
+						- local repo images name can be anything, without repo name
+					cloud 
+						- publically accessible repository
+						- anyone can access it from here
+						there are two types:
+							- private and public repository
+							
+							- when uploading to a public repo it is accessible to all without any credential
+								eg: docker hub is a public repository
+								
+							Private
+								- Secured repository
+								- it needs credentials to push and pull images
+								- Azure container registry(ACR), Elastic container registry(ECR) ,
+List of docker command								
+	docker images
+		- list all images located in local repo
+		
+	docker run -p host-port:container-port -d --name "name of container" --rm imagename
+		--name = used to assign a name for running container. if not used docker will assign random name to container
+		-d = detach mode
+		--rm = remove the container when stopped 
+		-p = map host machine port number to container app port.
+	
+	docker ps
+		- list all running containers
+	docker stop <containerID>/<container name>
+		- stop the running container
+	
+	docker ps -all 
+		- list all the runnning and stopped container
+	
+	docker rm <containerId/Container name>
+	
+		
+	
+			
 			
 			
 			

@@ -1,0 +1,11 @@
+C:\Users\r1m1nrao\source\repos\TopicPublisher\TopicPublisher\bin\Debug\netcoreapp2.2\TopicPublisher.deps.json
+C:\Users\r1m1nrao\source\repos\TopicPublisher\TopicPublisher\bin\Debug\netcoreapp2.2\TopicPublisher.runtimeconfig.json
+C:\Users\r1m1nrao\source\repos\TopicPublisher\TopicPublisher\bin\Debug\netcoreapp2.2\TopicPublisher.runtimeconfig.dev.json
+C:\Users\r1m1nrao\source\repos\TopicPublisher\TopicPublisher\bin\Debug\netcoreapp2.2\TopicPublisher.dll
+C:\Users\r1m1nrao\source\repos\TopicPublisher\TopicPublisher\obj\Debug\netcoreapp2.2\TopicPublisher.csprojAssemblyReference.cache
+C:\Users\r1m1nrao\source\repos\TopicPublisher\TopicPublisher\obj\Debug\netcoreapp2.2\TopicPublisher.csproj.CoreCompileInputs.cache
+C:\Users\r1m1nrao\source\repos\TopicPublisher\TopicPublisher\obj\Debug\netcoreapp2.2\TopicPublisher.AssemblyInfoInputs.cache
+C:\Users\r1m1nrao\source\repos\TopicPublisher\TopicPublisher\obj\Debug\netcoreapp2.2\TopicPublisher.AssemblyInfo.cs
+C:\Users\r1m1nrao\source\repos\TopicPublisher\TopicPublisher\bin\Debug\netcoreapp2.2\TopicPublisher.pdb
+C:\Users\r1m1nrao\source\repos\TopicPublisher\TopicPublisher\obj\Debug\netcoreapp2.2\TopicPublisher.dll
+C:\Users\r1m1nrao\source\repos\TopicPublisher\TopicPublisher\obj\Debug\netcoreapp2.2\TopicPublisher.pdb

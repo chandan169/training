@@ -1,0 +1,14 @@
+C:\Users\r1m1nrao\source\repos\ShoppingSite\ShoppingSite\bin\Debug\netcoreapp2.2\ShoppingSite.deps.json
+C:\Users\r1m1nrao\source\repos\ShoppingSite\ShoppingSite\bin\Debug\netcoreapp2.2\ShoppingSite.runtimeconfig.json
+C:\Users\r1m1nrao\source\repos\ShoppingSite\ShoppingSite\bin\Debug\netcoreapp2.2\ShoppingSite.runtimeconfig.dev.json
+C:\Users\r1m1nrao\source\repos\ShoppingSite\ShoppingSite\bin\Debug\netcoreapp2.2\ShoppingSite.dll
+C:\Users\r1m1nrao\source\repos\ShoppingSite\ShoppingSite\obj\Debug\netcoreapp2.2\ShoppingSite.csprojAssemblyReference.cache
+C:\Users\r1m1nrao\source\repos\ShoppingSite\ShoppingSite\obj\Debug\netcoreapp2.2\ShoppingSite.csproj.CoreCompileInputs.cache
+C:\Users\r1m1nrao\source\repos\ShoppingSite\ShoppingSite\obj\Debug\netcoreapp2.2\ShoppingSite.RazorAssemblyInfo.cache
+C:\Users\r1m1nrao\source\repos\ShoppingSite\ShoppingSite\obj\Debug\netcoreapp2.2\ShoppingSite.RazorAssemblyInfo.cs
+C:\Users\r1m1nrao\source\repos\ShoppingSite\ShoppingSite\obj\Debug\netcoreapp2.2\ShoppingSite.AssemblyInfoInputs.cache
+C:\Users\r1m1nrao\source\repos\ShoppingSite\ShoppingSite\obj\Debug\netcoreapp2.2\ShoppingSite.AssemblyInfo.cs
+C:\Users\r1m1nrao\source\repos\ShoppingSite\ShoppingSite\obj\Debug\netcoreapp2.2\ShoppingSite.RazorTargetAssemblyInfo.cache
+C:\Users\r1m1nrao\source\repos\ShoppingSite\ShoppingSite\bin\Debug\netcoreapp2.2\ShoppingSite.pdb
+C:\Users\r1m1nrao\source\repos\ShoppingSite\ShoppingSite\obj\Debug\netcoreapp2.2\ShoppingSite.dll
+C:\Users\r1m1nrao\source\repos\ShoppingSite\ShoppingSite\obj\Debug\netcoreapp2.2\ShoppingSite.pdb
