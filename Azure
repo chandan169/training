@@ -1,0 +1,297 @@
+On premise 
+	-Infrastructure cost -compute storage and network
+	-scaling
+		-scale up -increase the size of existing infrastructure
+		-scale out -increase the number of instances
+	-backup
+		-explicit backup policies need to be implemented.
+	-security
+		-security for application and network need to be configured explicitly.
+	-monitoring
+		-configure monitoring services
+	-compliance to specifications
+Cloud
+		-no need to buy infrastructure -No infra cost.
+		-scaling of app instance happens quickly.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+		-Backup inbuilt backup policies implemented.
+		-all level security is enabled.
+		-monitoring is by default enabled.
+		-compliance- all kind of apps can be implemented
+		-pay as you go model
+		-new framework and technology are adopted.
+Types of clouds:
+	-private clouds
+		- cloud infrastructure for a single customer.
+		- cloud vendor provides service only for a single customer
+	-public cloud
+		-Anybody can register and create an account.
+		-you can buy the subscription and start creating services.
+		-multiple user share the same ifrastructure.
+		-cheaper compared to private cloud.
+	-Hybrid cloud
+		-combination of private and public cloud
+
+cloud Model
+	cloud serices includes DB services,compute service, messaging service, serverless storage serices, Identity serices, AI serices, analytics service and more.
+	
+-three cloud service model
+	-IAAS - Infrastructure as a serices
+		cloud vendor offers infra services like compute (CPU, RAM), storage and network.
+		-you can set up your own app infrastructure using the iaas serrvices.
+		-This services are used by admins (IT pros)
+	-PAAS -PLATFORM AS A SERVICE
+		-this is used by developers
+		-Developers will get a preconfigured platform where server, database and security
+	-SAAS - Software as a service
+		-It is used by end user 
+		-Software is also provided by the cloud vendor.
+		-End user need to login and start using the application.
+		
+Azure Cloud
+	-Provides IAAS and PAAS services.
+	- Azure is having Datacenters in more than 50 regions.
+	- Azure Subscription
+		-Free subscription 
+			-free trail - 13300 Rs for a month.
+			-MSDN subscription 
+			-Azure Pass
+			
+		-pay as you go
+			-monthly you will get the bill
+		-Corporate account
+			
+	
+	
+Connecting Azure services
+	-Web portal (https://portal.azure.com)
+	-Command line options
+		-Azure CLI -crossplatform
+		-powershell
+		`	-Azure Powershell(for windows only) AzureRm module
+			-powershell core (cross platform) -az module
+		-Azure SDK for programming language
+			eg: azure SDK for dot net
+		-ARM templates
+			-JSON file declarative mode)
+		-REST api
+	-Azure Resource manager model (ARM)
+		-it uses Resource group
+				-Grouping resources
+				- group wise deployment
+				-group wise deletion
+				-Assign permission for group of resources(RBAC)
+				-group wise billing
+				
+	for connecting azure portal use the command:
+		- Connect-azaccount(powershell core)
+		- login-azureRm(Windows powershell)
+		
+	-Arm templates
+		- json file that contains the list of resources need to be deployed
+		- Sections:
+			-parameters 
+				-any dynamic value accepted from user at the time of deployment.
+			-variables
+				-used to store intermediate and reusable value.
+			-resources 
+				-the azure resources such as VM, VNET, storage acc, DB etc
+			-output
+				-output need to be printed in the screen after template execution
+Storage Account
+	-paas service for storing unstructured data/files in Azure
+	-One storage account can storage maximum 500 TB data.
+	-maximum of 200 storage account per subscription
+	-Every storage account has a unique name that is globally unique
+	-a storage account provides types of storage options:
+		-blob(container)
+			-unstructured blob files like audio, video, text file, pdf, images.
+		-File share 
+			-used for storing unstructured files 
+			-it is possible to map a file share as a network drive in your machine.
+			-it uses SMB 3.0 protocol
+		-Queue
+			-it is used for message based communication between apps
+			-one message max size is 64 Kb
+			-message max TTL(time to live) is 7 days
+		-Table storage
+			-key value pair unstructured data storage (NoSQL)
+	
+	-Replication of Storage account is necessary while creating Storage account
+		-it always takes minimum 2 copies of storage account data.
+		- SLA of 99.99 percent on availability
+		- replication method:
+			LRS - Locally redundant storage
+			ZRS - Zone redundant storage
+			GRS - geo Redundant storage
+			RAGRS Read access geo Redundant storage
+		
+	-Storage account Kind
+		-storage V1
+			-all 4 services (blob, file share, queue, table storage) are available
+			- stored media as standard/premium
+			- No option for selecting Hot/cool
+		-storage V2
+			- blob + storage V1
+			- All service type is supported
+			- Hot and cool is available
+			- Standard and premium is available
+		-blob
+			-only blob type is allowed.
+			-Hot and cool is available
+			-No premium support
+		
+	-Access tier 
+		-hot 
+		-cool
+	-Media 
+		-standard (HDD)
+		- premium (SSD)
+	
+	-security 
+		-Access Keys
+			-Key 1 and Key 2 is available
+			-both the keys has asmin previlage
+		-SAS token
+			-Shared Access signature
+			-Granular permission over the storage account
+		
+	- blob
+		-page Blob
+		-block Blob
+		-Append Blob
+		
+	-Queue
+		-Asynchronous message based communication
+		-Message maximum size is 64 Kb
+		-one message maximum time is 7 days
+		
+	-table
+		-unstructure Key-value storage
+		-data is stored as entities 
+		- Every entity has a row and partition key 
+		- An entity can have maximum 256 keys
+		- for every entity 
+		
+	-File Shared
+		-It is used to create network fle shares that can be mapped to your machine
+		- it is used as an extended storage for your machine
+		
+Azure App Service
+	-Is a compute service
+	-Is a paas serice used to deploy web, api and mobile apps.
+	-App service web app
+		- is used to deploy web applications such as MVC, web forms etc.
+	-App service Api App
+		-used to deploy restful serices and web serice
+	-App service Mobile app	
+		-Mobile app backed service is deployed
+		- push notification can be sent to mobile frontend.
+	-url https://appservicename.azurewebsite.net
+	-custom domain mapping
+	-App service plan
+		-Defines the SKU Capacity + location
+		-SKU (plan)
+			-Free plan
+				- No SLA available
+				-used for Testing purpose
+				-No custom domain mapping 
+			-Shared Plan
+				-No SLA available
+				-Shared infrastructure
+				-Custom domain mapping supported
+				-A minimal monthly charge is there.
+			-Basic(B1, B2)
+				-SLA available
+				-Dedicated machine available
+				-Custom domain mapping available
+				-Manual Scaling possible
+				-Not recommended for production (uses a low machine)
+			-standard 
+				-Recommended for production
+				-All feature of basic 
+				-Automatic scaling support.
+				-Staging slot support. (5 slots)
+				-Daily 10 times backup
+			-Premium
+				-More backup timing (50 times in a day)
+				-Maximum 20 additional slots
+			-ASE(App service Environment) (Isolated)
+				-VM is created in an isolated network
+		
+		
+		Deployment
+			-Deploy from vs/vs code
+			-Deployment centre
+				-FTP
+				-github
+				-Dropbox
+				-OneDrive
+		-Scale WebApp
+		
+			-scale out -Horizontal scaling
+				-Increase the number of instance of the application
+				-Manual scaling
+				-Automatic scaling -scale based on some metric
+				
+			-scale up -vertical scaling
+				-instance size is increased than the number
+				-changing the App service plan
+	
+		-Deployment slots
+			-slots are created for testing, and staging environments
+			-By default a production slot only available
+			-we can create additional slots in atandard and premium plans
+			
+			
+			
+			
+-Cosmos DB
+
+	-Database PaaS services
+	-A multi-model, planet sale database that support multiple database engine
+		-Document type
+			-Document Db (SQL API)
+			-Mongo Db API
+		-Key value pair
+			-Azure table Api
+		-column family type
+			-Cassandra
+		-Graph
+			-Gremlin
+	-It only use (ultra speed) SSD disk
+	-SLA of 99.9999999% on 
+		-Availability
+		-Durability
+		-Consistency
+		-Latency
+	- CosmosDb Account
+		-Select DB model
+		-Database
+			-Collection/Container
+			-Document/Data item
+	
+	-throughput
+		-performance unit for a database and collection
+		-RU -request unit
+		-1RU = one read of 1KB data
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

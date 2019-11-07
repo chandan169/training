@@ -1,0 +1,10 @@
+FROM nginx:latest
+
+LABEL  author "Chandan"
+LABEL  company "hexaware"
+
+WORKDIR /usr/share/nginx/html/
+
+COPY ./ ./
+
+EXPOSE 80

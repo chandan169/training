@@ -296,16 +296,64 @@ List of docker command
 		- list all the runnning and stopped container
 	
 	docker rm <containerId/Container name>
-	
+		-removed the stopped conatiner
+		
+	docker rm <containerId/Container name>
+		-removed the stopped conatiner	
 		
 	
+	Building images 
+		- A aset of commands need to be executed
+		- command can be written into a file called "DockerFile"
+		- the instruction to build an image may start with the following keywords:
+		 
+		 FROM <base imagename>
+				- specify the base image for our application.
+				-  eq: FROM nginx:latest
+		
+		-LABEL <key>=<value>
+			used to ass meta information for image, such as author life, version, company etc.
+			-LABEL  author "Chandan"
+			- LABEL version 1.2.0
 			
 			
+		- RUN <cmd><args>
+		
+		-	execute a coommand while building the image.
+		-	run dotnet restore && dotnet build &&dotnet publish
+		              
+			
+		WORKDIR<dir_path>
+			- set the current working directory inside the container.
+			- WORKDIR /user/app
+			- WORKDIR C:\Users\myapp
+			
+		COPY [-from <stage>|<source file/pattern> <dest_path>
+			- copy files from local machine to docker image path		
+			- COPY ./*.jpg /user/app/
+		
+		-ENV <envvariablename> <value>
+			-used to set the envronment variable value for the app.
+			
+		-PORT <port-number>
+			- specify the port no to opened
+			
+		-CMD <command> <args>
+			- Execute commands when the container is created.
+			- when image is running
+			
+		 - ENTRYPOINT <cmd> <args>
+			- Execute command when the container is created.
 			
 			
-			
-			
-			
+	Building docker image
+	-docker build -t <imagename:tag> docker <file path location>
+	eg: docker build -t mysampleapp:v1 . (. if the docker file is present in same location from where you are running)
+	
+	-containerizing .net core apps
+		-Download SDK and runtime images
+		
+		
 			
 			
 			
