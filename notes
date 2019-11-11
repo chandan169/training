@@ -345,13 +345,34 @@ List of docker command
 		 - ENTRYPOINT <cmd> <args>
 			- Execute command when the container is created.
 			
-			
+	Publish the container to cloud
+		-create the container using dockerfile 
+		-check the container using command docker images
+		-rename the container to username/container name using command docker tag catalogapi:latest chandan169/catalogapi:latest
+		-run the command docker login to login into your docker hub account
+		-run command docker push <image name>
+		
+		
+		
 	Building docker image
 	-docker build -t <imagename:tag> docker <file path location>
 	eg: docker build -t mysampleapp:v1 . (. if the docker file is present in same location from where you are running)
 	
 	-containerizing .net core apps
 		-Download SDK and runtime images
+			docker pull mcr.microsoft.com/dotnet/core/aspnet:2.2.7-bionic
+			docker pull mcr.microsoft.com/dotnet/core/aspnet    2.2.7-bionic
+			
+			
+	-Remove docker images
+		docker rmi <imagename/id>
+		docker rmi [-f] <imagename/id>
+	
+	-multi stage building
+		-create dockerfile and .dockerignore file
+		-Build image using "docker build -t <imagename> ."
+		-run the image using "docker run -p hostport:containerport <imagename>"
+		
 		
 		
 			

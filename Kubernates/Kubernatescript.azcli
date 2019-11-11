@@ -1,0 +1,59 @@
+
+#login to azure
+
+az login
+
+#create a resource group
+
+az group create -n K8SGroup -l southeastasia
+
+# get k8s supported versions
+
+az aks get-versions -l southeastasia --query "orchestrators[-1].orchestratorVersion" -o tsv 
+az aks get-versions -l southeastasia -o table
+
+az aks create -g K8SGroup -n k8sCluster -l southeastasia --enable-addons monitoring --kubernetes-version 1.13.12 --generate-ssh-keys --node-count 2 --node-vm-size Standard_D1
+
+#if getting error like "The subscription is not registered to use namespace 'Microsoft.Network'"
+
+az provider register --namespace Microsoft.Network
+
+#download the ssh token or authentication token for cluster
+az aks get-credentials -n k8sCluster -g k8sgroup
+
+# delete deployment 
+kubectl delete deploy <deployment-name>
+
+# get the list of deployment 
+kubectl get deploy
+#view the pods
+kubeset get pods
+#view the replica set
+kubeset get rs (replica set)
+
+#deply the replicas
+kubectl apply -f <Yaml file name> (.\catalogapi-deploy.yaml)
+
+#instead of delete and redeploy, simply replcae the existing deployment
+kubectl replace -f "yaml file name" (.\catalogapi-deploy.yaml)
+
+#see the pods details
+kubectl describe pod <pods name>
+
+#view the pod console
+kubectl log <pod name>
+
+#deploy a load balancer type service for catalog api
+kubectl apply -f <service file name>
+
+#get the service running
+kubectl get svc 
+
+#browsing the dashboard when you activate this dashboard you will get the error as by default we are not admin
+#run the below command to make yourself admin
+az aks browse -n k8scluster -g K8SGroup
+
+#define RBAC policey to access K8S dashboard
+
+kubectl apply -f "dashboard-admin.yaml"
+

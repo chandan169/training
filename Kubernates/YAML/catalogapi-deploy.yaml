@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: catalog-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: catalog
+  template:
+    metadata:
+      labels:
+        app: catalog
+    spec:
+      containers:
+      - name: catalogapi-container
+        image: chandan169/catalogapi:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+        env:
+          - name: MongoSettings_ConnectionString
+            value: "mongodb://chandan-cosmos-mongo:0XSU0m6pQtzkjCetAASVQsnTx7w1CQDTeMHdclpeirp9ouLrxbjqErUwUzEcRFRvZJTzh9POonHpGdQxeJpbtg==@chandan-cosmos-mongo.documents.azure.com:10255/?ssl=true&replicaSet=globaldb&retryWrites=false"
+          - name: MongoSettings_Database
+            value: "CatalogDb"
