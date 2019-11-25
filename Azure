@@ -318,31 +318,134 @@ AKS (Azure Kubeernates services)
 			
 API gateway managment
 			-Also called APIM (API managment)
+			- Components
+				-publisher portal
+					-Api Developer (Publisher)is configuring policies
+					-Policey is set of configuration done on APIs
+					-Azure portal itself is used as publish portal
+				-Gateway
+					-
+					-gateway forward the response sent by api to the client
+					
+				-Developer portal
+					-API consumers (client app developer) subscribe for the apis
+					-Once subscribe they will get asubscription key
+					-
+
+					
+			-Product , API and operations
+			-Policies
+				-Backend URL policey
+				- mocking
+				-request limit by key
+				-ip filter
+				-set header
+				-cors
+				-find and replace
+				
+			-ACI Azure container instances
+			-This is serverless con=mputing services
+			-Container deployment option in Azure
+				-Web app for Containers
+					-App service plan is created (Pre provision resources)
+					- One app per service Single container deployment
+					
+				-AKS
+					-cluster based deployment
+					-Multiple apps within the cluster service
+					-Orchestror required - Kubernate
+				-Service Fabric
+					-cluster based deployment
+					-only for microservices
+					Containerized apps need to deploy as SF project
+				-ACI -Azure container Instance
+					-serverless architecture
+					-No need to provision any resources before deployment
+					-single container deployment
+					
+	-Azure function App
+		-serverless computing solution
+		-A function starts executing with a trigger
+			-timer trigger
+			-Http trigger
+			-Blob trigger
+			-Queue trigger
+		-A function app is a piece of code that perform a single operations
+		- we need to write the code in c#, F# Js, php, Python, Java etc
+		-Binding 
+			-if we are using some other service it is called binding
+			types
+				-Input binding
+				-Output binding
+				-Trigger binding (A type of input binding)
+			-Hosting plan
+				-comsumption plan
+				-App service plan
+			-billing of azure function is based on number of executions execution time and memory used
+		-function app and functions
+			-Function is a piece of code that does an atomic task
+			-function app contain one or more functions
+			-two versions of functionApp -v1 and v2
+			to set the time in azure function we use chrone expression
+			like ****** second minute hour day month day of the week
+			eg	
+					
+		https://chandanfunctionapp.azurewebsites.net/api/sampleHttpFunction
+		
+		-to develop the function locally using azure function CLI
+			-npm i -g azure-function-core-tools
+			func init -used to create a new project
+				it will ask for the run time select the run time and create
+			func new -it create a new trigger method 
+			-TO RUN AND test locally use
+			 func host start or func start
+			-to install an additional package we use 
+			 func extension install
+			 
+			func azure functionapp list-functions <function app name> -used to list the functions present in function app
+		
+			command to publish  the with dependencies -i
 			
-			Catalog api
-					-Deploy
-					-Web app
-					-ACI
-					-AKS
-					-on premise web server
-				-Managment feature and functionalities
-					-security
-					-Enable  xml/Json transformation post deployment
-					-request limmiting/trottling
-					-mocking
-					-versioning
-					
-					
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		-DevOps
+			- development and operational.
+			-SDLC
+				-Requirement analysis
+					-collect client requirement
+					- Prioritise jobs
+					-Assign task to Developers and designers
+				-Designing phase
+					-ER diagram
+					-UML diagram
+				-Development
+					-Unit testing by developers
+				-Testing phase
+					-Integration testing
+					-System testing
+					-Load testing
+					-UAT
+					-Bug reporting/Defect identification
+					-Modification
+				-Deployment
+				
+		-Devops
+			-prioritise jobs
+			-job Allocation
+			-Code managment
+			-Testing
+			-Automated build and development (CI/CD)
+			
+			
+	-Event Grid
+		-Communication pattern
+			-Restful Services
+				-Sender and receiver must be online
+				-Request -response pattern
+				-Synchronous in nature
+				-Real time communication
+				-One to one communication
+				-Protocol is Http
+			-Message communication
+				-Messages are sent by the sender to a queue 
 		
 		
 		

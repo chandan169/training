@@ -346,7 +346,7 @@ List of docker command
 			- Execute command when the container is created.
 			
 	Publish the container to cloud
-		-create the container using dockerfile 
+		-create the container using dockerfile  command-- docker build -t catalogapi .
 		-check the container using command docker images
 		-rename the container to username/container name using command docker tag catalogapi:latest chandan169/catalogapi:latest
 		-run the command docker login to login into your docker hub account
